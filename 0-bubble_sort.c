@@ -6,7 +6,7 @@
  * @yp: second item
  * Return: Nothing
  */
-void swap(int *xp, int *yp)
+void swap_items(int *xp, int *yp)
 {
 	int temp = *xp;
 

@@ -1,20 +1,6 @@
 #include "sort.h"
 
 /**
- * swap_items - swap the given 2 items
- * @xp: first item
- * @yp: second item
- * Return: Nothing
- */
-void swap_items(int *xp, int *yp)
-{
-	int temp = *xp;
-
-	*xp = *yp;
-	*yp = temp;
-}
-
-/**
  * bubble_sort - sort an array using the bubble sort algoritm
  * @array: array to sort
  * @size: size of array
@@ -22,7 +8,7 @@ void swap_items(int *xp, int *yp)
  */
 void bubble_sort(int *array, size_t size)
 {
-	size_t i, j;
+	size_t i, j, curr;
 
 	for (i = 0; i < size - 1; i++)
 	{
@@ -30,7 +16,9 @@ void bubble_sort(int *array, size_t size)
 		{
 			if (array[j] > array[j + 1])
 			{
-				swap_items(&array[j], &array[j + 1]);
+				curr = array[j];
+				array[j] = array[j + 1];
+				array[j + 1] = curr;
 
 				print_array(array, size);
 			}

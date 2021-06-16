@@ -1,7 +1,7 @@
 #include "sort.h"
 
 /**
- * swap - swap the given 2 items
+ * swap_items - swap the given 2 items
  * @xp: first item
  * @yp: second item
  * Return: Nothing
@@ -26,11 +26,11 @@ void bubble_sort(int *array, size_t size)
 
 	for (i = 0; i < size - 1; i++)
 	{
-		for (j = 0; j < size - i - 1; j++)
+		for (j = 0; j < size - 1; j++)
 		{
 			if (array[j] > array[j + 1])
 			{
-				swap(&array[j], &array[j + 1]);
+				swap_items(&array[j], &array[j + 1]);
 
 				print_array(array, size);
 			}

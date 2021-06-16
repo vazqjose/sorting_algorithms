@@ -25,11 +25,11 @@ void insertion_sort_list(listint_t **list)
 			curr1->next = curr2->next;
 			curr2->next = curr1;
 
-			if(curr1->prev != NULL)
+			if (curr1->prev != NULL)
 				curr1->prev->next = curr2;
 			curr1->prev = curr2;
 
-			if(curr2->prev == NULL)
+			if (curr2->prev == NULL)
 				*list = curr2;
 			print_list(*list);
 		}
